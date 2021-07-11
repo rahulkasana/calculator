@@ -38,7 +38,13 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.0",
     "postcss": "^7.0.36",
+    "prettier": "2.3.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
