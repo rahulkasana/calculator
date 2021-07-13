@@ -25,6 +25,13 @@
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
+.digit:active {
+  opacity: 1;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    0 12px 10px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.01);
+}
 
 @layer utilities {
   @variants dark {
@@ -49,12 +56,19 @@
       cursor: pointer;
       border-radius: 1.5rem;
       border: double 1px transparent;
+      /*YOUTUBE THEME COLORS*/
       background-image: linear-gradient(145deg, #212121, #181818),
         linear-gradient(145deg, #c0c0c0, #aaaaaa, #181818);
       /*background-image: linear-gradient(145deg, #212121, #181818),*/
       /*linear-gradient(145deg, #aaaaaa, #181818);*/
       background-origin: border-box;
       background-clip: content-box, border-box;
+    }
+    .digit-dark:active {
+      opacity: 1;
+      box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.2),
+        inset 4px 4px 16px rgba(0, 0, 0, 0.8);
+      color: #79e3b6;
     }
   }
 }
