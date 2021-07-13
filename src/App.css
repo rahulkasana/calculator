@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+.bg-light {
+  background-color: #f6f0c4;
+  background-image: linear-gradient(90deg, #f6f0c4 0%, #d99ec9 74%);
+}
+.calculator-container {
+  background-color: #f5f5f5;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16), 2px 3px 6px rgba(0, 0, 0, 0.23);
+}
+.result-container {
+  background: #ffffff;
+  box-shadow: inset 2px 2px 6px #a9a9a9, inset -2px -2px 12px #ffffff;
+  color: #000;
+}
+.digit {
+  position: relative;
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+  background-color: #f5f2f2;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  border: double 1px transparent;
+  /*background-image: linear-gradient(145deg, #ffffff, #f5f2f2),*/
+  /*  linear-gradient(145deg, #ffffff, #767676);*/
+  background-image: linear-gradient(145deg, #ffffff, #f5f5f5),
+    linear-gradient(145deg, #ffffff, #c0c0c0, #a9a9a9, #808080);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.digit:active {
+  opacity: 1;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    0 12px 10px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.01);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@layer utilities {
+  @variants dark {
+    .bg-dark {
+      background-color: #7f5a83;
+      background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    }
+    .calculator-container-dark {
+      background: #181818;
+    }
+    .result-container-dark {
+      background: linear-gradient(145deg, #212121, #181818);
+      color: #fff;
+      box-shadow: inset -6px -6px 12px -10px #aaaaaa,
+        inset 6px 6px 12px -10px #181818;
+    }
+    .digit-dark {
+      position: relative;
+      color: white;
+      box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.05);
+      cursor: pointer;
+      border-radius: 1.5rem;
+      border: double 1px transparent;
+      /*YOUTUBE THEME COLORS*/
+      background-image: linear-gradient(145deg, #212121, #181818),
+        linear-gradient(145deg, #c0c0c0, #aaaaaa, #181818);
+      /*background-image: linear-gradient(145deg, #212121, #181818),*/
+      /*linear-gradient(145deg, #aaaaaa, #181818);*/
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+    }
+    .digit-dark:active {
+      opacity: 1;
+      box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.2),
+        inset 4px 4px 16px rgba(0, 0, 0, 0.8);
+      color: #79e3b6;
+    }
   }
 }
