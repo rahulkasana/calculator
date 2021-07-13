@@ -6,7 +6,7 @@ export default function DarkToggle() {
   useEffect(() => {
     if (
       localStorage.theme === "dark" ||
-      (!"theme" in localStorage &&
+      (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
       document.querySelector("html").classList.add("dark");
@@ -19,7 +19,7 @@ export default function DarkToggle() {
 
   const toggleDark = () => {
     let htmlClasses = document.querySelector("html").classList;
-    if (localStorage.theme == "dark") {
+    if (localStorage.theme === "dark") {
       htmlClasses.remove("dark");
       localStorage.removeItem("theme");
       setDark(false);
