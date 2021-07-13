@@ -100,9 +100,21 @@ function App() {
   };
 
   const renderAction = (actionStr) => {
+    let element = "";
+    let classes =
+      "flex h-full w-full justify-center items-center text-pink-400 text-3xl font-medium";
+    if (actionStr === ACTIONS.DIVIDE) {
+      element = <span className={classes}>&divide;</span>;
+    } else if (actionStr === ACTIONS.MULTIPLY) {
+      element = <span className={classes}>&times;</span>;
+    } else if (actionStr === ACTIONS.ADDITION) {
+      element = <span className={classes}>&#43;</span>;
+    } else if (actionStr === ACTIONS.SUBTRACT) {
+      element = <span className={classes}>&minus;</span>;
+    }
     return (
       <div className={item} onClick={() => setAction(actionStr)}>
-        {actionStr}
+        {element}
       </div>
     );
   };
@@ -138,13 +150,13 @@ function App() {
           </div>
           <div className="grid grid-flow-row grid-cols-4 grid-rows-5 text-3xl gap-4 h-full m-4">
             <div className={item} onClick={performAction(ACTIONS.CLEAR)}>
-              AC
+              <span className="text-pink-400 text-3xl font-medium">AC</span>
             </div>
             <div className={item} onClick={performAction(ACTIONS.INVERT)}>
-              +/-
+              <span className="text-pink-400 text-3xl font-medium">&#177;</span>
             </div>
             <div className={item} onClick={performAction(ACTIONS.PERCENT)}>
-              %
+              <span className="text-pink-400 text-3xl font-medium">&#37;</span>
             </div>
             {renderAction(ACTIONS.DIVIDE)}
 
@@ -167,7 +179,7 @@ function App() {
             {renderDigit(0)}
             {renderDigit(".")}
             <div className={item} onClick={calculate}>
-              =
+              <span className="text-pink-400 text-3xl font-medium">&#61;</span>
             </div>
           </div>
         </div>

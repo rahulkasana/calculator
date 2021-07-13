@@ -31,7 +31,7 @@ export default function DarkToggle() {
   };
   return (
     <div className="absolute top-0 left-0">
-      <div className="flex items-center">
+      <div className="flex items-center cursor-pointer" onClick={toggleDark}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-8 w-8 mr-2"
@@ -47,7 +47,7 @@ export default function DarkToggle() {
         <Switch
           uncheckedIcon={false}
           checkedIcon={false}
-          onChange={toggleDark}
+          // onChange={toggleDark}
           checked={isDark}
           offColor="#60d360"
           onColor="#111827"
