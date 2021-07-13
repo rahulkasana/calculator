@@ -126,7 +126,7 @@ function App() {
     <div className="flex h-full w-full flex-col bg-light dark:bg-dark">
       <DarkToggle />
       <div className="flex h-full w-full flex-col justify-center items-center">
-        <div className="flex flex-col h-4/5 w-4/5 sm:w-3/5 md:w-2/5 lg:w-4/12 shadow rounded-3xl overflow-hidden calculator-container dark:calculator-container-dark">
+        <div className="flex flex-col h-4/5 w-full sm:w-3/5 md:w-2/5 lg:w-4/12 shadow rounded-3xl overflow-hidden calculator-container dark:calculator-container-dark">
           <div className="flex flex-col h-1/4 result-container dark:result-container-dark rounded-3xl px-4 m-4">
             <div className="flex flex-row-reverse h-1/2 items-center flex-nowrap overflow-x-auto text-right text-xl">
               {/*{primaryInput} {action} {secondaryInput}*/}

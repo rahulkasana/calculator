@@ -5,6 +5,7 @@
 .calculator-container {
   background-color: #f5f5f5;
   box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16), 2px 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-tap-highlight-color: transparent;
 }
 .result-container {
   background: #ffffff;
@@ -39,6 +40,7 @@
     }
     .calculator-container-dark {
       background: #181818;
+      -webkit-tap-highlight-color: transparent;
     }
     .result-container-dark {
       background: linear-gradient(145deg, #212121, #181818);
